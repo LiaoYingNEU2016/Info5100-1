@@ -6,13 +6,15 @@ import sun.security.util.Length;
 public class Hw_4 {
 
     public static void main(String[] args){
+        
+        // Test Question 1
         String a = "a";
         String b = a.toUpperCase();
         System.out.println(b);
         String test_1 = "2-4A0r7-4k";
         System.out.println(Q1(test_1,3));
 
-        //test Q5
+        //test Question 5
         int test_5 = 4;
         System.out.println("the input is "+ test_5 +" and the Roman numeral:");
         System.out.println(intToRoman(test_5));
