@@ -1,0 +1,77 @@
+/**
+ * Created by starhaotian on 03/10/2017.
+ */
+public class Hw_4_Q4 {
+    public static void main(String[] args){ //Test method
+
+        Student Tian = new Student("Hao", "0001");
+        Student Zhang = new Student("Zhang", "0002");
+        Course Java = new Course("Java");
+        Java.registerStudent(Tian);
+        Java.registerStudent(Zhang);
+        Java.getStudent();
+
+    }
+}
+
+class Student{
+
+    private String name;
+    private String ID;
+    public Student(String name, String ID){
+        this.name = name;
+        this.ID = ID;
+    }
+
+    public String getter_name(){
+        return name;
+    }
+
+    public void setter_name(String name){
+        this.name = name;
+    }
+
+    public String getter_ID(){
+        return ID;
+    }
+
+    public void setter_ID(String ID){
+        this.ID = ID;
+    }
+
+
+}
+
+class Course{
+
+    String name;
+    int numberOfStudent = 0;
+    String[] Students_reg = new String[10];//the register students for this course
+
+    public Course(String name){
+        this.name = name;
+    }
+    public void getStudent(){
+        System.out.println("Now the course has students:");
+        for (int i = 0; i < numberOfStudent; i++){
+            System.out.println(Students_reg[i]);
+        }
+    }
+
+    public boolean isFull(){
+        if (this.numberOfStudent == 10){
+            return true;
+        }
+        return false;
+    }
+
+    public void registerStudent(Student student){
+        if (!isFull()) {
+            Students_reg[numberOfStudent++] = student.getter_name();
+        }
+        else {
+            System.out.println("the course is full");
+        }
+    }
+
+}
