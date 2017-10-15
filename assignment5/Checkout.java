@@ -1,4 +1,4 @@
-package Hw_5;
+package assignment5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
