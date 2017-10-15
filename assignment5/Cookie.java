@@ -1,4 +1,4 @@
-package Hw_5;
+package assignment5;
 
 /**
  * Created by starhaotian on 13/10/2017.
