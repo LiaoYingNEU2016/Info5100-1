@@ -46,7 +46,7 @@ question 3
 import  java.util.Scanner;
 public class  removeVowelsFromString{
 
-
+    // Consider making it a method not class, and also think about upper case vowels
     public  static void main(String[] args){
         System.out.println("Please input your string");
         Scanner scan = new Scanner(System.in);
@@ -83,6 +83,8 @@ public class checkIfTwoStringsAreAnagrams {
         }
         int l1 = s1.length();
         for(int i = 0; i < l1; i++){
+            // Wrong approach, think about test case of "think" and "nhitk" which should return true
+            // In your approach, it will return false in second loop, cuz "think" does not contain "nh"
             if (s2.contains(s1.substring(i)) == false){ // if s1's substring is not  in s2, return false
                 return false;
             }
@@ -159,6 +161,7 @@ public class calculator {
 
     public calculator(double a, double b, double c){
         if (a == 0){
+            // What if b == 0?
             this.result = -c / b;
             System.out.println("the solution is");
             System.out.println(result);
