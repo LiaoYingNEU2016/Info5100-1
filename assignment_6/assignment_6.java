@@ -6,7 +6,7 @@ import javax.security.auth.login.LoginContext;
  * Created by starhaotian on 20/10/2017.
  */
 
-// this is the problem 3
+// this is only the problem 3
 public class assignment_6 {
     public static void main(String[] args){
 
