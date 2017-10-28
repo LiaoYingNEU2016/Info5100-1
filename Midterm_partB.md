@@ -82,7 +82,7 @@ public static int minMoves(int[] nums){
                 min = nums[i];
             }
         }
-
+	// What's the intention for sum_min ?
         int sum_min = 0;
         for (int y : nums){
             if(y == min){
